@@ -1,0 +1,129 @@
+ ------------------------------------------------------------------------------------
+| Transcript of the logging messages by running the JUnit tests from testA to testJ: |
+ ------------------------------------------------------------------------------------
+
+Ruchis-MacBook-Pro:Cmpe275Lab1 ruchiagarwal$ gradle test
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:compileTestJava
+:processTestResources UP-TO-DATE
+:testClasses
+:test
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testA STANDARD_OUT
+    testA
+    Alice creates a secret with ID a1d326c7-3d9e-4c81-99d6-b7c277e619ad
+    Bob reads the secret ID a1d326c7-3d9e-4c81-99d6-b7c277e619ad
+    Throw Exception :Bob does not have permission to read secret of ID  a1d326c7-3d9e-4c81-99d6-b7c277e619ad
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testA PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testB STANDARD_OUT
+    testB
+    Alice creates a secret with ID d3cb2fea-3b55-4767-93b2-f4b748a9da1c
+    Alice shares the secret of ID d3cb2fea-3b55-4767-93b2-f4b748a9da1c with Bob
+    Bob reads the secret ID d3cb2fea-3b55-4767-93b2-f4b748a9da1c
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testB PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testC STANDARD_OUT
+    testC
+    Alice creates a secret with ID 653f4799-a353-4532-95f4-b5c0a7c272ea
+    Alice shares the secret of ID 653f4799-a353-4532-95f4-b5c0a7c272ea with Bob
+    Bob shares the secret of ID 653f4799-a353-4532-95f4-b5c0a7c272ea with Carl
+    Carl reads the secret ID 653f4799-a353-4532-95f4-b5c0a7c272ea
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testC PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testD STANDARD_OUT
+    testD
+    Alice creates a secret with ID c3ecf939-495b-4ca3-a12b-91c56e040b87
+    Alice shares the secret of ID c3ecf939-495b-4ca3-a12b-91c56e040b87 with Bob
+    Carl creates a secret with ID 60e40a20-eaff-4145-8a70-c30a878f145b
+    Bob shares the secret of ID 60e40a20-eaff-4145-8a70-c30a878f145b with Alice
+    Bob is not authorized to share secret of ID 60e40a20-eaff-4145-8a70-c30a878f145b with Alice
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testD PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testE STANDARD_OUT
+    testE
+    Alice creates a secret with ID 0f1ba783-9317-4c45-b975-fdcc94f21daa
+    Alice shares the secret of ID 0f1ba783-9317-4c45-b975-fdcc94f21daa with Bob
+    Bob shares the secret of ID 0f1ba783-9317-4c45-b975-fdcc94f21daa with Carl
+    Alice unshares the secret of ID 0f1ba783-9317-4c45-b975-fdcc94f21daa with Carl
+    Carl reads the secret ID 0f1ba783-9317-4c45-b975-fdcc94f21daa
+    Throw Exception :Carl does not have permission to read secret of ID  0f1ba783-9317-4c45-b975-fdcc94f21daa
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testE PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testF STANDARD_OUT
+    testF
+    Alice creates a secret with ID 0ea14411-97a6-4646-82b2-4a2b78712ff3
+    Alice shares the secret of ID 0ea14411-97a6-4646-82b2-4a2b78712ff3 with Bob
+    Alice shares the secret of ID 0ea14411-97a6-4646-82b2-4a2b78712ff3 with Carl
+    Carl shares the secret of ID 0ea14411-97a6-4646-82b2-4a2b78712ff3 with Bob
+    Alice unshares the secret of ID 0ea14411-97a6-4646-82b2-4a2b78712ff3 with Bob
+    Bob reads the secret ID 0ea14411-97a6-4646-82b2-4a2b78712ff3
+    Throw Exception :Bob does not have permission to read secret of ID  0ea14411-97a6-4646-82b2-4a2b78712ff3
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testF PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testG STANDARD_OUT
+    testG
+    Alice creates a secret with ID f8f0a243-b611-443a-8a4a-70f2ab2bb4d6
+    Alice shares the secret of ID f8f0a243-b611-443a-8a4a-70f2ab2bb4d6 with Bob
+    Bob shares the secret of ID f8f0a243-b611-443a-8a4a-70f2ab2bb4d6 with Carl
+    Bob unshares the secret of ID f8f0a243-b611-443a-8a4a-70f2ab2bb4d6 with Carl
+    Carl reads the secret ID f8f0a243-b611-443a-8a4a-70f2ab2bb4d6
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testG PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testH STANDARD_OUT
+    testH
+    Alice creates a secret with ID b0fc34dc-e278-45ac-b9b8-28a6fcd4a9f6
+    Alice shares the secret of ID b0fc34dc-e278-45ac-b9b8-28a6fcd4a9f6 with Bob
+    Carl unshares the secret of ID b0fc34dc-e278-45ac-b9b8-28a6fcd4a9f6 with Bob
+    Carl is not authorized to unshare secret of ID b0fc34dc-e278-45ac-b9b8-28a6fcd4a9f6 with Bob
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testH PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testI STANDARD_OUT
+    testI
+    Alice creates a secret with ID 5336b259-25e1-40fd-88ea-1f9b1085c79b
+    Alice shares the secret of ID 5336b259-25e1-40fd-88ea-1f9b1085c79b with Bob
+    Bob shares the secret of ID 5336b259-25e1-40fd-88ea-1f9b1085c79b with Carl
+    Alice unshares the secret of ID 5336b259-25e1-40fd-88ea-1f9b1085c79b with Bob
+    Bob shares the secret of ID 5336b259-25e1-40fd-88ea-1f9b1085c79b with Carl
+    Bob is not authorized to share secret of ID 5336b259-25e1-40fd-88ea-1f9b1085c79b with Carl
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testI PASSED
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testJ STANDARD_OUT
+    testJ
+    Alice creates a secret with ID 694bb0c9-d113-408b-aa6f-3f5743cc1df3
+    Alice creates a secret with ID 5877336c-1e7b-45de-957f-0294b2502b1b
+
+edu.sjsu.cmpe275.lab1.tests.SecretServiceTest > testJ PASSED
+
+BUILD SUCCESSFUL
+
+Total time: 29.166 secs
+Ruchis-MacBook-Pro:Cmpe275Lab1 ruchiagarwal$
+
+
+ -----------------------------------------------
+| Results of the each test from testA to testJ: |
+ -----------------------------------------------
+
+ testA: pass
+ testB: pass
+ testC: pass
+ testD: pass
+ testE: pass
+ testF: pass
+ testG: pass
+ testH: pass
+ testI: pass
+ testJ: pass
+
